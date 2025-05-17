@@ -16,9 +16,10 @@ O objetivo é facilitar o acesso e a visualização de informações educacionai
 
 ## 🗂️ Estrutura do Projeto
 
+```
 desafio4/
-├── index.html            # Landing page institucional
-├── dashboard.html        # Página do dashboard interativo
+├── index.html              # Landing page institucional
+├── dashboard.html          # Página do dashboard interativo
 ├── assets/
 │   ├── css/
 │   │   ├── index_styles.css  # Estilos da landing page
@@ -28,6 +29,7 @@ desafio4/
 │   │   └── Icon.png          # Ícone institucional
 ├── js/
 │   └── script.js             # Script para integração com API e geração dos gráficos
+```
 
 
 
