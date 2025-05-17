@@ -1,0 +1,281 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  padding-top: 70px; /* espaço para header fixo */
+  text-align: center;
+  color: #222;
+  line-height: 1.6;
+}
+
+.container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 20px;
+}
+
+/* Header e Navegação */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #005fa3;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav__logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.nav__menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav__link:hover,
+.nav__link.active-link {
+  opacity: 0.8;
+}
+
+.nav__toggle,
+.nav__close {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Navegação Responsiva */
+@media (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #005fa3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+  }
+
+  .nav__menu.show-menu {
+    right: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nav__toggle {
+    display: block;
+  }
+
+  .nav__close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+/* Conteúdo */
+h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #111827;
+}
+
+.botoes-estados {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.botoes-estados button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.botoes-estados button:hover {
+  background-color: #1d4ed8;
+}
+
+canvas#grafico {
+  background-color: white;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+
+.export-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.export-buttons button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.export-buttons button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .botoes-estados button,
+  .export-buttons button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  canvas#grafico {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .botoes-estados {
+    gap: 0.4rem;
+  }
+
+  .botoes-estados button,
+  .export-buttons button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  canvas#grafico {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  canvas#grafico {
+    padding: 1rem;
+    width: 95%;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding: 3rem 4rem;
+  }
+
+  .botoes-estados button,
+  .export-buttons button {
+    font-size: 1rem;
+    padding: 0.8rem 1.4rem;
+  }
+
+  canvas#grafico {
+    max-width: 1200px;
+  }
+}
+
+/* Footer - ajustado para responsividade e tamanho correto */
+
+/* Footer ocupa largura total da tela */
+footer {
+  background: #005fa3;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+/* Tablets pequenos e celulares grandes */
+@media (max-width: 768px) and (min-width: 481px) {
+  footer {
+    padding: 18px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets e desktops médios */
+@media (min-width: 769px) and (max-width: 1024px) {
+  footer {
+    padding: 20px 30px;
+    font-size: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
