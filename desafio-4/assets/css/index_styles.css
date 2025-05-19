@@ -76,7 +76,7 @@ body {
 
 
 .hero {
-  background: #fef4e6;
+  background: #fff;
   padding: 60px 20px;
   text-align: center;
 }
@@ -287,5 +287,109 @@ footer {
   ul {
     font-size: 1rem;
     padding: 0 10px;
+  }
+}
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-logo {
+  width: 500px;
+  max-width: 70%;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+.bloco-conteudo {
+  background-color: #fff;
+  margin: 40px auto;
+  padding: 30px 40px;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(230, 126, 34, 0.5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bloco-conteudo h3 {
+  font-size: 26px;
+  color: #e67e22;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e67e22;
+  padding-bottom: 5px;
+}
+
+.bloco-conteudo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bloco-conteudo li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: #e67e22;
+}
+
+.bloco-conteudo li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color:#e67e22;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .bloco-conteudo {
+    padding: 20px;
+    margin: 20px 16px;
+  }
+
+  .bloco-conteudo h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .bloco-conteudo li {
+    font-size: 16px;
+    padding-left: 24px;
+  }
+
+  .bloco-conteudo li::before {
+    font-size: 16px;
+    top: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bloco-conteudo {
+    padding: 16px;
+    margin: 16px 12px;
+  }
+
+  .bloco-conteudo h3 {
+    font-size: 20px;
+  }
+
+  .bloco-conteudo li {
+    font-size: 15px;
+    margin-bottom: 12px;
   }
 }
