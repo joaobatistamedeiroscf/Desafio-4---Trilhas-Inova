@@ -54,30 +54,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="js/script.js"></script>
-  <script>
-    const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close');
-
-    if (navToggle) {
-      navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu');
-      });
-    }
-
-    if (navClose) {
-      navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
-      });
-    }
-
-    document.querySelectorAll('.nav__link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
-      });
-    });
-  </script>
-
+  <script src="js/script_exportar_grafico.js"></script>
+  
   <footer>
     <p>&copy; 2025 Projeto Acesso à Educação. Todos os direitos
       reservados.</p>
