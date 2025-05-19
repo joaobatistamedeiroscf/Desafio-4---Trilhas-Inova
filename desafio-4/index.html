@@ -19,6 +19,10 @@
   </head>
 
   <body>
+    <div id="preloader">
+      <img src="assets/img/logo.png" alt="Logo Acesso a Educação"
+        class="preloader-logo">
+    </div>
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">Acesso à Educação</a>
@@ -71,47 +75,58 @@
       <img src="assets/img/dashboard.png" alt="Imagem do dashboard" />
     </section>
 
-    <section id="desafios">
-      <h3>Desafios da Educação no Brasil</h3>
-      <ul>
-        <li>Desigualdade regional e social</li>
-        <li>Infraestrutura escolar precária</li>
-        <li>Falta de professores e valorização profissional</li>
-        <li>Evasão escolar por necessidade de trabalho</li>
-      </ul>
-    </section>
+    <section id="desafios" class="bloco-conteudo">
+  <h3>Desafios da Educação no Brasil</h3>
+  <ul>
+    <li>Desigualdade regional e social</li>
+    <li>Infraestrutura escolar precária</li>
+    <li>Falta de professores e valorização profissional</li>
+    <li>Evasão escolar por necessidade de trabalho</li>
+  </ul>
+</section>
 
-    <section id="solucoes">
-      <h3>Soluções Possíveis</h3>
-      <ul>
-        <li>Investimentos em tecnologia e conectividade</li>
-        <li>Políticas de permanência escolar</li>
-        <li>Formação e valorização docente</li>
-        <li>Fiscalização eficiente dos recursos públicos</li>
-      </ul>
-    </section>
+<section id="solucoes" class="bloco-conteudo">
+  <h3>Soluções Possíveis</h3>
+  <ul>
+    <li>Investimentos em tecnologia e conectividade</li>
+    <li>Políticas de permanência escolar</li>
+    <li>Formação e valorização docente</li>
+    <li>Fiscalização eficiente dos recursos públicos</li>
+  </ul>
+</section>
+   <script> 
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  setTimeout(() => {
+    preloader.classList.add("fade-out");
+  }, 1000); // tempo mínimo visível (em milissegundos)
+});
 
-    <script> const navMenu = document.getElementById('nav-menu');
-    const navToggle = document.getElementById('nav-toggle');
-    const navClose = document.getElementById('nav-close');
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
 
-    // Mostrar menu
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.add('show-menu');
-    });
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu');
+      });
+    }
 
-    // Fechar menu
-    navClose.addEventListener('click', () => {
-      navMenu.classList.remove('show-menu');
-    });
+    if (navClose) {
+      navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+      });
+    }
 
-    // Fechar menu ao clicar em um link
-    document.querySelectorAll('.nav__link').forEach(link =>
+    document.querySelectorAll('.nav__link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
-      })
-    );</script>
+      });
+    });
+  
+ </script>
 
+    <script src="js/script.js"></script>
     <footer>
       <p>&copy; 2025 Projeto Acesso à Educação. Todos os direitos
         reservados.</p>
