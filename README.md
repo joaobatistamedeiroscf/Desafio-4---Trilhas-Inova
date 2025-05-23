@@ -69,4 +69,4 @@ desafio4/
    git clone https://github.com/joaobatistamedeiroscf/Desafio-4---Trilhas-Inova.git
 2.Abra o arquivo index.html no navegador para acessar a landing page.
 
-3.Navegue para dashboard.html para explorar o dashboard interativo.
+3.Navegue para dashboard.html para explorar o dashboard interativo. sobre educação no Brasil
